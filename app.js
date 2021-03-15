@@ -6,8 +6,8 @@ let bmTechStackParentWidth, bmTechStackWidth, bmTechStackHeight, bmTechStackScal
 
 const attribution = document.querySelector('.attribution');
 const attributionMarkup = document.createElement('div');
-attributionMarkup.classList.add('attribution-content', 'text-xs', 'text-center');
-attributionMarkup.innerHTML = 'Tech Stack Banner by @brandymedia';
+attributionMarkup.classList.add('attribution-content', 'text-xs', 'text-right');
+attributionMarkup.innerHTML = 'created by @brandymedia';
 
 function toggleAttribution() {
     if (attribution.checked === true) {
