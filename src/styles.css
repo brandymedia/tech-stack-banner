@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+
+div.bm-tech-stack {
+    background-color: #0e0e18;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.bm-tech-stack-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choices__inner {
+    border-radius: 0;
+    border: none;
+}
