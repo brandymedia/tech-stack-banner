@@ -4,6 +4,21 @@ const bmTechStack = document.querySelector('.bm-tech-stack');
 // const bmTechStackItemLength = tech.length;
 let bmTechStackParentWidth, bmTechStackWidth, bmTechStackHeight, bmTechStackScale;
 
+const attribution = document.querySelector('.attribution');
+const attributionMarkup = document.createElement('div');
+attributionMarkup.classList.add('attribution-content', 'text-xs', 'text-center');
+attributionMarkup.innerHTML = 'Tech Stack Banner by @brandymedia';
+
+function toggleAttribution() {
+    if (attribution.checked === true) {
+        bmTechStack.appendChild(attributionMarkup);
+    } else if (attribution.checked === false) {
+        if (bmTechStack.contains(attributionMarkup)) {
+            bmTechStack.removeChild(attributionMarkup);
+        }
+    }
+}
+
 async function setSize() {
     bmTechStackParentWidth = bmTechStack.parentElement.clientWidth;
     bmTechStackWidth = bmTechStackParentWidth;
@@ -121,21 +136,30 @@ choices.passedElement.element.addEventListener('addItem', async () => {
     selectedTech = choices.getValue(true);
     await setSize();
     await buildStack(selectedTech);
+    toggleAttribution();
 });
 
 choices.passedElement.element.addEventListener('removeItem', async () => {
     selectedTech = choices.getValue(true);
     await setSize();
     await buildStack(selectedTech);
+    toggleAttribution();
 });
 
 // Listen for events
 window.addEventListener('load', async () => {
     await setSize();
     await buildStack(selectedTech);
+    toggleAttribution();
 });
 
 window.addEventListener('resize', async () => {
     await setSize();
     await buildStack(selectedTech);
+    toggleAttribution();
 });
+
+
+attribution.addEventListener('change', async () => {
+    toggleAttribution();
+})

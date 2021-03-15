@@ -13,9 +13,10 @@ h1 {
 }
 
 div.bm-tech-stack {
-    background-color: #0e0e18;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 div.bm-tech-stack-item {
@@ -32,6 +33,7 @@ div.bm-tech-stack-item {
 
 .choices__list--multiple .choices__item {
     background-color: rgba(96, 165, 250);
+    background-color: rgba(52, 211, 153);
     border: none;
     font-size: 1rem;
     margin-right: 0.5rem;
@@ -42,4 +44,16 @@ div.bm-tech-stack-item {
     border-left: none;
     padding-right: 1rem;
     margin-left: 0;
+}
+
+div.attribution-content {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.logo {
+    max-width: 200px;
 }

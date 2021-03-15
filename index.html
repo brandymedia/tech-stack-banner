@@ -4,35 +4,71 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <script src="https://kit.fontawesome.com/2a9337220b.js" crossorigin="anonymous"></script>
+        <title>Twitter Tech Stack Banner</title>
+        <meta name="description" content="Build your own Twitter Tech Stack banner">
+        <meta property="og:title" content="Twitter Tech Stack Banner">
+        <meta property="og:description" content="Build your own Twitter Tech Stack banner">
+        <meta property="og:image" content="https://res.cloudinary.com/brandymedia/image/upload/v1615821438/tech-stack-banner_snckik.png">
+        <meta property="og:image:secure_url" content="https://res.cloudinary.com/brandymedia/image/upload/v1615821438/tech-stack-banner_snckik.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="http://stack.brandymedia.co.uk/">
+        <meta name="twitter:card" content="summary_large_image" /> 
+        <meta name="twitter:site" content="@brandymedia" /> 
+        <meta name="twitter:title" content="Build your own Twitter Tech Stack banner" /> 
+        <meta name="twitter:description" content="Build your own Twitter Tech Stack banner" /> 
+        <meta name="twitter:image" content="https://res.cloudinary.com/brandymedia/image/upload/v1615821438/tech-stack-banner_snckik.png" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
         <link rel="stylesheet" href="public/dist/styles.css">
-        <title>Tech Stack Banner</title>
     </head>
-    <body class="bg-white dark:bg-gray-900">
+    <body class="bg-gray-100">
 
-        <div class="flex w-full justify-around items-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white py-5">
-            <h1 class="text-2xl tracking-tight	">Tech Stack Banner</h1>
+        <div class="py-5 flex w-full justify-center flex-col md:flex-row items-center bg-gray-800 text-green-400">
+            <i class="fas fa-layer-group text-2xl md:mr-5"></i>
+            <h1 class="text-2xl tracking-tight">Twitter Tech Stack Banner</h1>
+        </div>
+
+        <div class="mt-10 px-3 max-w-xl mx-auto text-center">
+            <h2 class="text-2xl tracking-tight">Build your own Twitter Tech Stack banner</h2>
+        </div>
+
+        <div class="my-10 px-10 max-w-xl mx-auto">
+            <div class="border-2 border-green-400">
+                <select name="" id="" class="js-choice" multiple>
+                    <option value="">Select your tech stacks...</option>
+                </select>
+            </div>
         </div>
 
         <div class="mt-10 max-w-xl mx-auto text-center">
-            <p>Select your tech stack to build your own Twitter banner</p>
-        </div>
-
-        <div class="my-10 max-w-xl mx-auto shadow-md border-2 border-blue-400">
-            <select name="" id="" class="js-choice" multiple></select>
-        </div>
-
-        <div class="my-10 max-w-xxl mx-auto shadow-md">
             <div class="bm-tech-stack"></div>
         </div>
 
-        <div class="my-10 bg-gray-100 flex justify-center py-5">
-            <a href="#" class="download bg-green-400 text-white p-4 shadow-md">Download Banner</a>
+        <div class="mt-10 p-5 max-w-sm mx-auto text-center border-2 border-gray-300">
+            <div class="mb-3">
+                Attribution
+                <input type="checkbox" name="attribution" id="attribution" class="attribution">
+            </div>
+            <p class="text-sm text-gray-500"><i class="fas fa-info-circle"></i> I'd love it if you attributed the design - No hard feelings if you decide not to.</p>
         </div>
 
+        <div class="mt-10 py-10 flex justify-center bg-gray-800">
+            <a href="" class="download p-4 bg-green-400 text-gray-800"><i class="fas fa-file-download"></i> Download Banner</a>
+        </div>
+
+        <div class="py-10 text-center flex flex-col justify-center bg-gray-100">
+            <div class="mb-5">
+                <p class="text-sm">Powered by <a href="https://brandymedia.co.uk/" target="_blank">Brandy Media</a></p>
+            </div>
+            <div>
+                <a href="https://brandymedia.co.uk/" target="_blank">
+                    <img class="logo inline" src="./images/Brandy Media logo.svg" alt="Brandy Media Logo">
+                </a>
+            </div>
+    
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
         <script type="module" src="app.js"></script>
