@@ -78,6 +78,9 @@ async function buildStack(selectedTech) {
 const downloadButton = document.querySelector('.download');
 
 downloadButton.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     html2canvas(bmTechStack, {scale: bmTechStackScale}).then(canvas => {
         canvas.toBlob(function(blob) {
             let link = document.createElement('a');
