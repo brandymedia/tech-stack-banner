@@ -23,7 +23,6 @@ async function buildStack(selectedTech) {
         let bmTechStackItemHeight;
 
         if (bmTechStackItemLength == 1) {
-            console.log(bmTechStackWidth, bmTechStackHeight);
             bmTechStackItemWidth = bmTechStackWidth;
             bmTechStackItemHeight = bmTechStackHeight;
         } else if (bmTechStackItemLength <= 10) {
