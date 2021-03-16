@@ -3,6 +3,16 @@ import tech from '/tech.js';
 const bmTechStack = document.querySelector('.bm-tech-stack');
 let bmTechStackParentWidth, bmTechStackWidth, bmTechStackHeight, bmTechStackScale;
 
+function reloadScrollBars() {
+    document.documentElement.style.overflow = 'auto';
+    document.body.scroll = "yes";
+}
+
+function unloadScrollBars() {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = "no";
+}
+
 const attribution = document.querySelector('.attribution');
 const attributionMarkup = document.createElement('div');
 attributionMarkup.classList.add('attribution-content', 'flex', 'justify-end');
@@ -95,6 +105,7 @@ async function buildStack(selectedTech) {
 const downloadButton = document.querySelector('.download');
 
 downloadButton.addEventListener('click', () => {
+    unloadScrollBars();
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
@@ -107,6 +118,7 @@ downloadButton.addEventListener('click', () => {
             link.click();
         }, 'image/png', 1);
     });
+    reloadScrollBars();
 });
 
 // map to new array
