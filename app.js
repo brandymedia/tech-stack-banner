@@ -1,13 +1,15 @@
 import tech from '/tech.js';
 
 const bmTechStack = document.querySelector('.bm-tech-stack');
-// const bmTechStackItemLength = tech.length;
 let bmTechStackParentWidth, bmTechStackWidth, bmTechStackHeight, bmTechStackScale;
 
 const attribution = document.querySelector('.attribution');
 const attributionMarkup = document.createElement('div');
-attributionMarkup.classList.add('attribution-content', 'text-xs', 'text-right');
-attributionMarkup.innerHTML = 'created by @brandymedia';
+attributionMarkup.classList.add('attribution-content', 'flex', 'justify-end');
+const attributionMarkupInner = document.createElement('div');
+attributionMarkupInner.classList.add('attribution-content-inner', 'text-xs', 'p-1', 'flex', 'items-center');
+attributionMarkupInner.innerHTML = 'created by @brandymedia';
+attributionMarkup.appendChild(attributionMarkupInner);
 
 function toggleAttribution() {
     if (attribution.checked === true) {
@@ -124,10 +126,52 @@ const choices = new Choices(element, {
 
 choices.setChoices(techChoices);
 
-
 // Set some default technologies
-// choices.setValue([techChoices[0], techChoices[1], techChoices[2]]);  
-choices.setChoiceByValue([techChoices[0].value, techChoices[1].value, techChoices[2].value]);
+choices.setChoiceByValue(
+    [
+        techChoices[0].value,
+        techChoices[1].value,
+        techChoices[2].value,
+        techChoices[3].value,
+        techChoices[4].value,
+        techChoices[5].value,
+        techChoices[6].value,
+        techChoices[7].value,
+        techChoices[8].value,
+        techChoices[9].value,
+        techChoices[10].value,
+        techChoices[11].value,
+        techChoices[12].value,
+        techChoices[13].value,
+        techChoices[14].value,
+        techChoices[15].value,
+        techChoices[16].value,
+        techChoices[17].value,
+        techChoices[18].value,
+        techChoices[19].value,
+        techChoices[20].value,
+        techChoices[21].value,
+        techChoices[22].value,
+        techChoices[23].value,
+        techChoices[24].value,
+        techChoices[25].value,
+        techChoices[26].value,
+        techChoices[27].value,
+        techChoices[28].value,
+        techChoices[29].value,
+        techChoices[30].value,
+        techChoices[31].value,
+        techChoices[32].value,
+        techChoices[33].value,
+        techChoices[34].value,
+        techChoices[35].value,
+        techChoices[36].value,
+        techChoices[37].value,
+        techChoices[38].value,
+        techChoices[39].value,
+        techChoices[40].value,
+    ]
+);
 
 let selectedTech = choices.getValue(true);
 
@@ -158,7 +202,6 @@ window.addEventListener('resize', async () => {
     await buildStack(selectedTech);
     toggleAttribution();
 });
-
 
 attribution.addEventListener('change', async () => {
     toggleAttribution();
