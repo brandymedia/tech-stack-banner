@@ -32,8 +32,8 @@ div.bm-tech-stack-item {
 }
 
 .choices__list--multiple .choices__item {
-    background-color: rgba(96, 165, 250);
     background-color: rgba(52, 211, 153);
+    color: #1f2937;
     border: none;
     font-size: 1rem;
     margin-right: 0.5rem;
